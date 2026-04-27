@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | PDX British – Land Rover & Range Rover Specialists</title>
+  <meta name="description" content="PDX British has been Portland's trusted independent Land Rover and Range Rover specialist since 1991. Meet owners Francis and Elsa Watson.">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(rgba(10,47,42,0.78), rgba(10,47,42,0.78)), url('images/gallery-classic.jpg') center/cover no-repeat;
+      padding: 100px 0 80px;
+      color: #fff;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 3rem; color: #fff; margin-bottom: 12px; }
+    .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--gold2); }
+
+    .about-story { padding: 100px 0; }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .story-text h2 { font-size: 2.4rem; color: var(--green); margin-bottom: 16px; }
+    .story-text p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+    .story-img img {
+      border-radius: var(--radius-lg);
+      height: 500px;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .values { background: var(--light); padding: 80px 0; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .value-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+    }
+    .value-icon { font-size: 2rem; margin-bottom: 16px; }
+    .value-card h3 { font-size: 1.3rem; color: var(--green); margin-bottom: 10px; }
+    .value-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    .trust-section { padding: 80px 0; }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .trust-card {
+      background: var(--green);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 20px;
+    }
+    .trust-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold2);
+      line-height: 1;
+    }
+    .trust-card p { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 8px; letter-spacing: 0.06em; }
+
+    .amenities { background: var(--cream); padding: 60px 0; }
+    .amenities h2 { font-size: 1.8rem; color: var(--green); margin-bottom: 32px; }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .amenity {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .story-img img { height: 320px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .trust-grid { grid-template-columns: 1fr; }
+      .amenities-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    📍 Serving Portland, OR &amp; SW Washington &nbsp;|&nbsp; <strong>Mon–Fri 8am–5pm</strong> &nbsp;|&nbsp; <a href="tel:5035956600">(503) 595-6600</a>
+  </div>
+</div>
+
+<header class="main-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-mark">
+      <span class="brand">PDX British</span>
+      <span class="sub">Land Rover &amp; Range Rover Specialists</span>
+    </a>
+    <div class="header-cta">
+      <a href="tel:5035956600" class="phone">(503) 595-6600</a>
+      <small>Call or text to schedule</small>
+    </div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / About</p>
+    <h1>Our Story</h1>
+    <p>Family-owned and operated since 1991. Portland's most trusted independent Land Rover specialists.</p>
+  </div>
+</div>
+
+<section class="about-story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text fade-up">
+        <p class="section-label">Since 1991</p>
+        <h2>More Than Three Decades of Rover Expertise</h2>
+        <div class="gold-rule"></div>
+        <p>PDX British was founded in 1991 by Francis Watson — a Land Rover enthusiast who turned his passion into Portland's most respected independent Rover shop. What started as a small operation has grown into a full-service specialist workshop serving Portland, Oregon and SW Washington.</p>
+        <p>Francis and Elsa Watson are on-site every day. This isn't a franchise. It's not a chain. It's a family business built on the belief that Land Rover and Range Rover owners deserve honest, expert service without the dealer markup or the runaround.</p>
+        <p>We use the factory Land Rover T4 TestBook diagnostic system — the same tool franchised dealers use — giving us full access to every system in every Rover we work on. Our customers trust us with vehicles they've owned for decades, and we take that seriously.</p>
+        <p>Over the years, we've built a reputation in the Pacific Northwest Land Rover community that no advertising budget can buy: word of mouth from people who know their Rovers and know when they've found someone who actually understands them.</p>
+      </div>
+      <div class="story-img fade-up delay-2">
+        <img src="images/gallery-shop.jpg" alt="PDX British workshop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <p class="section-label">What We Stand For</p>
+    <h2 class="section-title">Our Values</h2>
+    <div class="gold-rule"></div>
+    <div class="values-grid">
+      <div class="value-card fade-up">
+        <div class="value-icon">🔍</div>
+        <h3>Honesty First</h3>
+        <p>We tell you what your vehicle actually needs — nothing more, nothing less. No upselling, no unnecessary repairs, no vague estimates. You get a straight answer from someone who knows your vehicle.</p>
+      </div>
+      <div class="value-card fade-up delay-1">
+        <div class="value-icon">🎯</div>
+        <h3>Specialist Expertise</h3>
+        <p>We work exclusively on Land Rovers and Range Rovers. That focus means deeper knowledge, better diagnostic accuracy, and faster turnaround than a general shop that sees your Rover once a year.</p>
+      </div>
+      <div class="value-card fade-up delay-2">
+        <div class="value-icon">🤝</div>
+        <h3>Long-Term Relationships</h3>
+        <p>Many of our customers have been coming to us for 10, 15, even 20 years. We know their vehicles. We know their history. That continuity is something a dealership can never offer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="container">
+    <p class="section-label">By the Numbers</p>
+    <h2 class="section-title">Why Portland Trusts Us</h2>
+    <div class="gold-rule"></div>
+    <div class="trust-grid">
+      <div class="trust-card fade-up">
+        <div class="trust-num">1991</div>
+        <p>Year Founded</p>
+      </div>
+      <div class="trust-card fade-up delay-1">
+        <div class="trust-num">4.8★</div>
+        <p>Google Rating (40 reviews)</p>
+      </div>
+      <div class="trust-card fade-up delay-2">
+        <div class="trust-num">4.3★</div>
+        <p>Yelp Rating (38 reviews)</p>
+      </div>
+      <div class="trust-card fade-up delay-3">
+        <div class="trust-num">A+</div>
+        <p>BBB Rating</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="amenities">
+  <div class="container">
+    <h2>Shop Amenities &amp; Policies</h2>
+    <div class="amenities-grid">
+      <div class="amenity">☕ Comfortable waiting room</div>
+      <div class="amenity">📶 Free Wi-Fi</div>
+      <div class="amenity">💳 All major credit cards accepted</div>
+      <div class="amenity">🎖️ Military discount available</div>
+      <div class="amenity">🏳️‍🌈 LGBTQ+ friendly</div>
+      <div class="amenity">🚗 Walk-ins welcome (appointments preferred)</div>
+      <div class="amenity">🛡️ 24-month / 24,000-mile warranty on major repairs</div>
+      <div class="amenity">📋 Written estimates provided before all work</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">PDX British</div>
+        <div class="sub">Land Rover &amp; Range Rover Specialists</div>
+        <p>Portland's premier independent Land Rover and Range Rover specialist since 1991. Family-owned by Francis &amp; Elsa Watson.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Factory Diagnostics</a></li>
+          <li><a href="services.html">EAS &amp; Suspension</a></li>
+          <li><a href="services.html">Engine &amp; Electrical</a></li>
+          <li><a href="services.html">Off-Road Outfitting</a></li>
+          <li><a href="services.html">Pre-Purchase Inspections</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 <a href="tel:5035956600">(503) 595-6600</a></p>
+        <p>✉️ <a href="mailto:service@pdxbritish.com">service@pdxbritish.com</a></p>
+        <p>📍 6320 SW Macadam Ave<br>Portland, OR 97239</p>
+        <p>🕒 Mon–Fri: 8:00 AM – 5:00 PM<br>Sat: By Appointment · Sun: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PDX British. All rights reserved.</span>
+      <span>Land Rover and Range Rover are trademarks of their respective owners.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

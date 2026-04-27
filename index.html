@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDX British | Portland's Land Rover & Range Rover Specialist Since 1991</title>
+  <meta name="description" content="PDX British – Portland's premier independent Land Rover and Range Rover specialist since 1991. Factory T4 diagnostics. 4.8★ Google. Family-owned by Francis & Elsa Watson.">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 92vh;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/hero.jpg') center center / cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(10,47,42,0.82) 0%, rgba(10,47,42,0.45) 60%, rgba(0,0,0,0.2) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      color: #fff;
+      padding: 0 32px;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      color: #fff;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 520px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-ratings { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .trust-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+    .trust-icon {
+      width: 40px; height: 40px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .trust-item strong { display: block; font-weight: 600; }
+    .trust-item span { color: var(--muted); font-size: 0.8rem; }
+
+    /* ── INTRO ── */
+    .intro { padding: 100px 0; }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .intro-img {
+      position: relative;
+    }
+    .intro-img img {
+      border-radius: var(--radius-lg);
+      height: 480px;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+    .intro-badge {
+      position: absolute;
+      bottom: -24px; right: -24px;
+      background: var(--green);
+      color: #fff;
+      padding: 20px 24px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .intro-badge .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold2);
+      line-height: 1;
+    }
+    .intro-badge .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 4px; }
+    .intro-text .section-sub { margin-bottom: 32px; }
+    .intro-features { list-style: none; margin-bottom: 36px; }
+    .intro-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+    }
+    .intro-features li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── SERVICES PREVIEW ── */
+    .services-preview { background: var(--light); padding: 100px 0; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .svc-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .svc-card img { height: 200px; object-fit: cover; }
+    .svc-card-body { padding: 24px; }
+    .svc-card h3 { font-size: 1.3rem; color: var(--green); margin-bottom: 8px; }
+    .svc-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    .svc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .svc-link:hover { color: var(--green); }
+    .services-cta { text-align: center; margin-top: 48px; }
+
+    /* ── STATS BAND ── */
+    .stats-band {
+      background: var(--green);
+      padding: 72px 0;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--gold2);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 8px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 100px 0; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .review-card {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position: relative;
+    }
+    .review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 14px; }
+    .review-text { font-size: 0.92rem; color: var(--text); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+    .review-author { font-size: 0.8rem; font-weight: 600; color: var(--green); }
+    .review-source { font-size: 0.75rem; color: var(--muted); }
+    .review-quote {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.2;
+      line-height: 1;
+    }
+
+    /* ── GALLERY STRIP ── */
+    .gallery-strip { background: var(--green); padding: 80px 0; }
+    .gallery-strip-header { color: #fff; margin-bottom: 40px; }
+    .gallery-strip-header .section-title { color: #fff; }
+    .gallery-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+    .gallery-strip-grid img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: transform var(--transition), filter var(--transition);
+      cursor: pointer;
+      filter: brightness(0.85);
+    }
+    .gallery-strip-grid img:hover { transform: scale(1.03); filter: brightness(1); }
+    .gallery-cta { text-align: center; margin-top: 32px; }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-band h2 { font-size: 2.8rem; color: var(--green); margin-bottom: 16px; }
+    .cta-band p { font-size: 1rem; color: var(--muted); max-width: 560px; margin: 0 auto 36px; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 48px; }
+      .intro-img img { height: 340px; }
+      .intro-badge { bottom: -16px; right: 16px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .gallery-strip-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .hero { height: 100svh; }
+      .hero-content { padding: 0 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-strip-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    📍 Serving Portland, OR &amp; SW Washington &nbsp;|&nbsp; <strong>Mon–Fri 8am–5pm</strong> &nbsp;|&nbsp; <a href="tel:5035956600">Emergency? Call (503) 595-6600 →</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-mark">
+      <span class="brand">PDX British</span>
+      <span class="sub">Land Rover &amp; Range Rover Specialists</span>
+    </a>
+    <div class="header-cta">
+      <a href="tel:5035956600" class="phone">(503) 595-6600</a>
+      <small>Call or text to schedule</small>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="container">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content fade-up">
+    <p class="hero-eyebrow">Portland's Premier Land Rover Specialist Since 1991</p>
+    <h1>Precision Care<br>for Every Rover</h1>
+    <p>Factory T4 diagnostics. Honest advice. Family-owned by Francis &amp; Elsa Watson — on-site every day.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn-gold">Schedule Service</a>
+      <a href="services.html" class="btn btn-outline-white">Our Services</a>
+    </div>
+    <div class="hero-ratings">
+      <div class="rating-pill"><span class="stars">★★★★★</span> 4.8 Google (40 reviews)</div>
+      <div class="rating-pill"><span class="stars">★★★★</span> 4.3 Yelp (38 reviews)</div>
+      <div class="rating-pill">🏆 A+ BBB</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item">
+        <div class="trust-icon">🔧</div>
+        <div><strong>Factory T4 TestBook</strong><span>Official Land Rover diagnostics</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📅</div>
+        <div><strong>Since 1991</strong><span>35+ years of Rover expertise</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <div><strong>24-Month Warranty</strong><span>24,000-mile coverage on major repairs</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">👨‍👩‍👧</div>
+        <div><strong>Family-Owned</strong><span>Francis &amp; Elsa Watson, on-site daily</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🏆</div>
+        <div><strong>A+ BBB Rating</strong><span>Trusted by Portland for decades</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-img fade-up">
+        <img src="images/gallery-shop.jpg" alt="PDX British workshop with Range Rovers on lifts">
+        <div class="intro-badge">
+          <div class="num">35+</div>
+          <div class="label">Years of<br>Rover Expertise</div>
+        </div>
+      </div>
+      <div class="intro-text fade-up delay-2">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Portland's Most Trusted Independent Rover Shop</h2>
+        <div class="gold-rule"></div>
+        <p class="section-sub">PDX British has been Portland's go-to independent Land Rover and Range Rover specialist since 1991. We're not a dealership — we're enthusiasts who chose to make this our life's work.</p>
+        <ul class="intro-features">
+          <li>Factory Land Rover T4 TestBook diagnostic system — the same tool dealers use</li>
+          <li>Full-service capability: oil changes through complete engine rebuilds</li>
+          <li>Custom off-road outfitting: lift kits, winches, bumpers, roof racks</li>
+          <li>Pre-purchase and for-sale inspections</li>
+          <li>EAS air suspension specialists &amp; coil spring conversions</li>
+          <li>Military discount available · LGBTQ+ friendly shop</li>
+        </ul>
+        <a href="about.html" class="btn btn-green">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <div class="container">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Specialist Services</h2>
+    <div class="gold-rule"></div>
+    <p class="section-sub">From routine maintenance to complex rebuilds and full off-road outfitting — we handle everything your Rover needs.</p>
+    <div class="services-grid">
+      <div class="svc-card fade-up">
+        <img src="images/svc-diagnostics.jpg" alt="T4 TestBook diagnostics">
+        <div class="svc-card-body">
+          <h3>Factory Diagnostics</h3>
+          <p>We use the official Land Rover T4 TestBook system — the same diagnostic tool used by franchised dealers — for precise fault-finding on all models.</p>
+          <a href="services.html" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="svc-card fade-up delay-1">
+        <img src="images/svc-suspension.jpg" alt="EAS air suspension service">
+        <div class="svc-card-body">
+          <h3>EAS &amp; Suspension</h3>
+          <p>Air suspension diagnostics, compressor rebuilds, EAS valve block service, and coil spring conversion specialists for all Range Rover models.</p>
+          <a href="services.html" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+      <div class="svc-card fade-up delay-2">
+        <img src="images/svc-offroad.jpg" alt="Off-road outfitting">
+        <div class="svc-card-body">
+          <h3>Off-Road Outfitting</h3>
+          <p>Lift kits, custom bumpers, WARN winches, roof racks, skid plates, and full expedition builds. We outfit Rovers for the Pacific Northwest and beyond.</p>
+          <a href="services.html" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta">
+      <a href="services.html" class="btn btn-green">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-row">
+      <div class="fade-up">
+        <div class="stat-num">1991</div>
+        <div class="stat-label">Year Founded</div>
+      </div>
+      <div class="fade-up delay-1">
+        <div class="stat-num">4.8★</div>
+        <div class="stat-label">Google Rating (40 reviews)</div>
+      </div>
+      <div class="fade-up delay-2">
+        <div class="stat-num">A+</div>
+        <div class="stat-label">BBB Rating</div>
+      </div>
+      <div class="fade-up delay-3">
+        <div class="stat-num">24mo</div>
+        <div class="stat-label">Warranty on Major Repairs</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <p class="section-label">What Customers Say</p>
+    <h2 class="section-title">Trusted by Portland's Rover Community</h2>
+    <div class="gold-rule"></div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Francis is a great owner — honest, fair, and he knows Rovers inside and out. I've been bringing my Discovery here for 12 years. Wouldn't go anywhere else.</p>
+        <div class="review-author">Long-time Customer</div>
+        <div class="review-source">Yelp Review</div>
+      </div>
+      <div class="review-card fade-up delay-1">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Best independent Land Rover shop in the Pacific Northwest. They diagnosed an EAS issue three dealers had missed, fixed it properly, and charged a fair price. Incredible.</p>
+        <div class="review-author">Verified Customer</div>
+        <div class="review-source">Google Review</div>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Francis and Scott are terrific. They did a full pre-purchase inspection on my Range Rover Sport and found issues that saved me thousands. Worth every penny.</p>
+        <div class="review-author">Range Rover Sport Owner</div>
+        <div class="review-source">Yelp Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<section class="gallery-strip">
+  <div class="container">
+    <div class="gallery-strip-header">
+      <p class="section-label" style="color:var(--gold);">Our Work &amp; Rovers</p>
+      <h2 class="section-title">From the Shop &amp; the Trail</h2>
+    </div>
+    <div class="gallery-strip-grid">
+      <img src="images/hero.jpg" alt="Range Rover in mountains">
+      <img src="images/gallery-offroad.jpg" alt="Defender off-road">
+      <img src="images/gallery-shop.jpg" alt="PDX British workshop">
+      <img src="images/gallery-engine.jpg" alt="Engine repair">
+      <img src="images/gallery-luxury.jpg" alt="Range Rover Portland">
+      <img src="images/gallery-classic.jpg" alt="Classic Land Rover">
+    </div>
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn btn-outline-white" style="margin-top:8px;">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Schedule Service?</h2>
+    <p>Call us, send an email, or fill out our contact form. We answer live Monday through Friday, 8am–5pm.</p>
+    <div class="cta-actions">
+      <a href="tel:5035956600" class="btn btn-gold">Call (503) 595-6600</a>
+      <a href="contact.html" class="btn btn-green">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">PDX British</div>
+        <div class="sub">Land Rover &amp; Range Rover Specialists</div>
+        <p>Portland's premier independent Land Rover and Range Rover specialist since 1991. Family-owned by Francis &amp; Elsa Watson. Factory T4 diagnostics. Honest service. No dealer markup.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Factory Diagnostics</a></li>
+          <li><a href="services.html">EAS &amp; Suspension</a></li>
+          <li><a href="services.html">Engine &amp; Electrical</a></li>
+          <li><a href="services.html">Off-Road Outfitting</a></li>
+          <li><a href="services.html">Pre-Purchase Inspections</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 <a href="tel:5035956600">(503) 595-6600</a></p>
+        <p>✉️ <a href="mailto:service@pdxbritish.com">service@pdxbritish.com</a></p>
+        <p>📍 6320 SW Macadam Ave<br>Portland, OR 97239</p>
+        <p>🕒 Mon–Fri: 8:00 AM – 5:00 PM<br>Sat: By Appointment · Sun: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PDX British. All rights reserved.</span>
+      <span>Land Rover and Range Rover are trademarks of their respective owners.</span>
+      <span><a href="https://www.google.com/maps/place/PDX+British" target="_blank">Google Reviews</a> · <a href="https://www.yelp.com/biz/pdx-british-portland" target="_blank">Yelp</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
