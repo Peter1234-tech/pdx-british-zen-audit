@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDX British | Portland's Land Rover &amp; Range Rover Specialist Since 1991</title>
+    <meta name="description" content="Portland's trusted Land Rover &amp; Range Rover specialist. 4.8★ Google rating. Family-owned since 1991. Call (503) 595-6600.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1e2b;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0a2540;
+        }
+
+        /* Header */
+        .top-bar {
+            background: #0a2540;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .top-bar a {
+            color: #ffd966;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #0a2540;
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            color: #5a6e7c;
+        }
+
+        .header-phone {
+            background: #eef2f5;
+            padding: 8px 20px;
+            border-radius: 40px;
+        }
+
+        .header-phone a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a2540;
+            text-decoration: none;
+        }
+
+        .header-phone small {
+            display: block;
+            font-size: 0.7rem;
+            color: #2c6e49;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            background: white;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a2c3e;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2c6e49;
+        }
+
+        /* Hero */
+        .hero {
+            background: #f8fafc;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .hero .rating-badge {
+            background: white;
+            display: inline-flex;
+            gap: 24px;
+            padding: 12px 28px;
+            border-radius: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin: 24px 0;
+            font-weight: 500;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2c6e49;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 16px;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #1e4d33;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2c6e49;
+            color: #2c6e49;
+        }
+
+        .btn-outline:hover {
+            background: #2c6e49;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .service-card {
+            background: #f9fafb;
+            padding: 16px 20px;
+            border-radius: 16px;
+            border-left: 4px solid #ffd966;
+            font-weight: 500;
+            transition: 0.1s;
+        }
+
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            background: #f1f5f9;
+            padding: 40px 32px;
+            border-radius: 24px;
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .stat {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0a2540;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 24px;
+        }
+
+        .contact-info p {
+            margin: 16px 0;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: #2c6e49;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .map {
+            width: 100%;
+            height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 16px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-form {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 28px;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 8px 0 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-family: inherit;
+        }
+
+        button[type="submit"] {
+            background: #0a2540;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        footer {
+            background: #0a2540;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #ffd966;
+        }
+
+        @media (max-width: 750px) {
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    📍 Serving Portland &amp; SW Washington | <a href="#contact">Emergency? Call us →</a>
+</div>
+
+<div class="main-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>PDX British</h1>
+            <p>Portland's Land Rover &amp; Range Rover Specialist Since 1991</p>
+        </div>
+        <div class="header-phone">
+            <a href="tel:5035956600">(503) 595-6600</a>
+            <small>Call or text • Free estimate</small>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h2>Land Rover &amp; Range Rover<br>Specialists Since 1991</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Factory T4 diagnostics, 4.8★ Google rating, and honest advice you can trust.</p>
+        <div class="rating-badge">
+            <span>⭐ 4.8 (40 Google reviews)</span>
+            <span>⭐ 4.3 (38 Yelp)</span>
+            <span>🏆 A+ BBB</span>
+        </div>
+        <a href="tel:5035956600" class="btn">Call (503) 595-6600 to Book</a>
+        <a href="#contact" class="btn btn-outline" style="margin-left: 12px;">Email or Form</a>
+    </div>
+</section>
+
+<div class="container">
+    <section id="services">
+        <h2>What We Fix &amp; Build</h2>
+        <div class="services-grid">
+            <div class="service-card">🔧 Oil changes &amp; scheduled maintenance</div>
+            <div class="service-card">❄️ Air conditioning</div>
+            <div class="service-card">⚙️ Automatic transmission</div>
+            <div class="service-card">🛑 Brakes / ABS</div>
+            <div class="service-card">💻 Computer diagnostics (T4 factory TestBook)</div>
+            <div class="service-card">🌡️ Cooling system</div>
+            <div class="service-card">📦 EAS / air suspension / coil spring conversions</div>
+            <div class="service-card">🔌 Engine &amp; electrical</div>
+            <div class="service-card">💨 Exhaust</div>
+            <div class="service-card">⛽ Ignition &amp; fuel injection</div>
+            <div class="service-card">🚙 Lift kits / bumpers / winches / roof racks</div>
+            <div class="service-card">🔍 Pre-purchase inspections</div>
+            <div class="service-card">🏕️ Off-road &amp; expedition outfitting</div>
+            <div class="service-card">💧 Sunroof leak detection</div>
+            <div class="service-card">🔧 Transfer case &amp; drivetrain</div>
+            <div class="service-card">🛡️ SRS / airbag systems</div>
+        </div>
+        <p style="margin-top: 24px; background: #eef2f5; padding: 12px 20px; border-radius: 40px; display: inline-block;">🔧 24-month / 24,000-mile warranty on all major repairs (ask for details)</p>
+    </section>
+
+    <section id="about">
+        <h2>Why Portland Trusts PDX British</h2>
+        <div class="stats-row">
+            <div class="stat"><div class="stat-number">1991</div><div>Years Serving Rovers</div></div>
+            <div class="stat"><div class="stat-number">4.8★</div><div>Google (40 reviews)</div></div>
+            <div class="stat"><div class="stat-number">35+</div><div>Years Combined Experience</div></div>
+        </div>
+        <p style="font-size: 1.1rem; margin-bottom: 16px;">Family-owned and operated, with a dedicated team of experienced Land Rover technicians — Francis &amp; Elsa Watson are on-site daily.</p>
+        <p>We use the factory Land Rover T4 TestBook diagnostic system, handle everything from oil changes to full engine rebuilds, and even do custom off-road outfitting. No dealer markup, no guessing.</p>
+        <div style="margin-top: 24px;">
+            <a href="https://www.google.com/maps/place/PDX+British/@45.4784,-122.6784,17z" target="_blank" style="margin-right: 24px;">📝 Read Google Reviews</a>
+            <a href="https://www.yelp.com/biz/pdx-british-portland" target="_blank">📝 Read Yelp Reviews</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Schedule Your Appointment</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📞 Call or text:</strong><br><a href="tel:5035956600">(503) 595-6600</a><br>Fax: (503) 236-6091</p>
+                <p><strong>✉️ Email:</strong><br><a href="mailto:service@pdxbritish.com">service@pdxbritish.com</a></p>
+                <p><strong>📍 Shop address:</strong><br>6320 SW Macadam Ave, Portland, OR 97239</p>
+                <p><strong>🕒 Hours:</strong><br>Mon–Fri: 8:00 AM – 5:00 PM · Sat: By Appointment Only · Sun: Closed</p>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.1!2d-122.6784!3d45.4784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495515e2eba8787%3A0x934aee35dc86a7b7!2sPDX%20British!5e0!3m2!1sen!2sus!4v1"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p style="margin-top: 16px; font-size: 0.85rem;">* Walk-ins welcome, but appointments recommended.</p>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom: 16px;">Send a message</h3>
+                <form action="mailto:service@pdxbritish.com" method="post" enctype="text/plain">
+                    <label>Full name</label>
+                    <input type="text" name="name" required>
+                    <label>Phone (best number)</label>
+                    <input type="tel" name="phone">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                    <label>Vehicle &amp; service needed</label>
+                    <textarea rows="4" name="message" placeholder="e.g., 2015 Range Rover Sport – check engine light"></textarea>
+                    <button type="submit">Send Request →</button>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 12px; text-align: center;">Or just call <strong>(503) 595-6600</strong> – we answer live 8am–5pm.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 1991 PDX British – Portland's Land Rover &amp; Range Rover Specialist Since 1991<br>
+    6320 SW Macadam Ave, Portland, OR 97239 | <a href="tel:5035956600">(503) 595-6600</a> | <a href="mailto:service@pdxbritish.com">service@pdxbritish.com</a></p>
+    <p style="margin-top: 12px;">Land Rover, Range Rover, and TestBook are trademarks of their respective owners.</p>
+</footer>
+
+</body>
+</html>

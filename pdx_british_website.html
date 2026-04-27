@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PDX British | Portland's Land Rover & Range Rover Specialist Since 1991</title>
+    <meta name="description" content="PDX British – Portland's Land Rover & Range Rover Specialist Since 1991. Rated 4.8★ on Google. Family-owned since 1991. Call (503) 595-6600.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1e2a2e;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: #0f2c2f;
+            color: white;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-area p {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        .contact-header {
+            text-align: right;
+        }
+
+        .contact-header a {
+            color: #facc15;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .contact-header small {
+            display: block;
+            font-size: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        nav {
+            background: #1f4e4a;
+            padding: 8px 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #facc15;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.pdxbritish.com/');
+            background-size: cover;
+            background-position: center 30%;
+            background-color: #1f4e4a;
+            color: white;
+            text-align: center;
+            padding: 100px 24px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero .rating {
+            background: rgba(0,0,0,0.7);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #facc15;
+            color: #0f2c2f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 24px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #eab308;
+            transform: scale(1.02);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: #0f2c2f;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 14px 18px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-left: 4px solid #facc15;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: space-between;
+            background: #eef2f3;
+            padding: 32px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #0f2c2f;
+        }
+
+        .review-logos a {
+            margin-right: 16px;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #0f2c2f;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #0f2c2f;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.9rem;
+        }
+
+        .map-placeholder {
+            background: #e2e8f0;
+            height: 300px;
+            border-radius: 16px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        @media (max-width: 700px) {
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-header {
+                text-align: center;
+            }
+            #contact > div > div:first-child,
+            #contact > div > div:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo-area">
+            <h1>PDX British</h1>
+            <p>Portland's Land Rover &amp; Range Rover Specialist Since 1991</p>
+        </div>
+        <div class="contact-header">
+            <a href="tel:(503) 595-6600">(503) 595-6600</a>
+            <small>Call or text to schedule</small>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Land Rover &amp; Range Rover<br>Repair You Can Trust</h2>
+    <p>Factory T4 diagnostics | Family-owned since 1991 | Serving Portland &amp; SW Washington</p>
+    <div class="rating">
+        ⭐ 4.8 (40 Google reviews) | 4.3★ Yelp
+    </div>
+    <a href="tel:(503) 595-6600" class="btn">Call Now: (503) 595-6600</a>
+</section>
+
+<div class="container">
+    <section id="services">
+        <h2>Specialized Services</h2>
+        <div class="services-grid">
+            <div class="service-item">🔧 Oil changes &amp; scheduled maintenance</div>
+            <div class="service-item">❄️ Air conditioning</div>
+            <div class="service-item">⚙️ Automatic transmission</div>
+            <div class="service-item">🛑 Brakes / ABS</div>
+            <div class="service-item">💻 Computer diagnostics (T4 factory TestBook)</div>
+            <div class="service-item">🌡️ Cooling system</div>
+            <div class="service-item">📦 EAS / air suspension / coil spring conversions</div>
+            <div class="service-item">🔌 Engine &amp; electrical</div>
+            <div class="service-item">💨 Exhaust</div>
+            <div class="service-item">⛽ Ignition &amp; fuel injection</div>
+            <div class="service-item">🚙 Lift kits / bumpers / winches / roof racks</div>
+            <div class="service-item">🔍 Pre-purchase inspections</div>
+            <div class="service-item">🏕️ Off-road &amp; expedition outfitting</div>
+            <div class="service-item">💧 Sunroof leak detection</div>
+            <div class="service-item">🔧 Transfer case &amp; drivetrain</div>
+            <div class="service-item">🛡️ SRS / airbag systems</div>
+        </div>
+        <p style="margin-top: 24px;"><strong>24-month / 24,000-mile warranty on all major repairs (ask for details)</strong></p>
+    </section>
+
+    <section id="about">
+        <h2>Why PDX British?</h2>
+        <div class="stats">
+            <div class="stat"><div class="stat-number">1991</div><div>Founded</div></div>
+            <div class="stat"><div class="stat-number">4.8★</div><div>Google Rating (40 reviews)</div></div>
+            <div class="stat"><div class="stat-number">A+</div><div>BBB Rating</div></div>
+        </div>
+        <p style="margin: 24px 0; font-size: 1.1rem;">Family-owned and operated, with a dedicated team of experienced Land Rover technicians. Owned and operated by Francis &amp; Elsa Watson.</p>
+        <div class="review-logos">
+            <a href="https://www.google.com/maps/place/PDX+British/@45.4784,-122.6784,17z" target="_blank">⭐ See Google Reviews</a>
+            <a href="https://www.yelp.com/biz/pdx-british-portland" target="_blank">⭐ See Yelp Reviews</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+            <div>
+                <p><strong>📞 Phone:</strong> <a href="tel:5035956600">(503) 595-6600</a> (fax: (503) 236-6091)</p>
+                <p><strong>✉️ Email:</strong> <a href="mailto:service@pdxbritish.com">service@pdxbritish.com</a></p>
+                <p><strong>📍 Address:</strong> 6320 SW Macadam Ave, Portland, OR 97239</p>
+                <p><strong>🕒 Hours:</strong> Mon–Fri: 8:00 AM – 5:00 PM · Sat: By Appointment Only · Sun: Closed</p>
+                <div class="map-placeholder">
+                    <iframe
+                        width="100%"
+                        height="300"
+                        style="border:0; border-radius:16px;"
+                        loading="lazy"
+                        allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=PDX+British,6320+SW+Macadam+Ave,Portland,OR+97239">
+                    </iframe>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="mailto:service@pdxbritish.com" method="post" enctype="text/plain">
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+                    <label>Phone</label>
+                    <input type="tel" name="phone">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                    <label>Message / Vehicle info</label>
+                    <textarea rows="4" name="message"></textarea>
+                    <button type="submit">Send Request →</button>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 12px;">Or call <strong>(503) 595-6600</strong> for immediate scheduling.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 1991 PDX British – Portland's Land Rover &amp; Range Rover Specialist Since 1991<br>
+    6320 SW Macadam Ave, Portland, OR 97239 | (503) 595-6600 | <a href="mailto:service@pdxbritish.com" style="color:#facc15;">service@pdxbritish.com</a></p>
+</footer>
+
+</body>
+</html>
