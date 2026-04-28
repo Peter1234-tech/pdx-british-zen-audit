@@ -232,13 +232,23 @@ Review each claim below. For each one, choose one of the following:
 
 ---
 
-**5.3 — Service Area: Portland and SW Washington**
+**5.3 — Service Area**
 
-> The site states: *"Serving Portland, OR & SW Washington"* in the top bar across all pages and in the about page story text.
+> The site now states in multiple locations: *"Located on SW Macadam Ave in Portland, PDX British serves Land Rover and Range Rover owners from Portland, Lake Oswego, Beaverton, Tigard, Vancouver, SW Washington, and the broader Oregon Rover community."*
+>
+> The top bar across all pages continues to read: *"Serving Portland, OR & SW Washington."*
 
-- [ ] ✅ Confirmed — PDX British serves both Portland, OR and SW Washington
-- [ ] ✏️ Needs Correction — Correct service area description is: ___________
-- [ ] ❌ Remove
+Please confirm each location listed below:
+
+- [ ] ✅ Portland, OR — confirmed
+- [ ] ✅ Lake Oswego — confirmed
+- [ ] ✅ Beaverton — confirmed
+- [ ] ✅ Tigard — confirmed
+- [ ] ✅ Vancouver, WA — confirmed
+- [ ] ✅ SW Washington — confirmed
+- [ ] ✅ "Broader Oregon Rover community" language — confirmed
+- [ ] ✏️ One or more locations need correction — please note: ___________
+- [ ] ❌ Remove service-area language entirely
 
 **Notes:** ___________________________________________________________
 
