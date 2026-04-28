@@ -30,7 +30,7 @@ The new website is ready for you to review at the link below.
 
 The new PDX British website is a five-page, professionally designed site built to give PDX British a stronger, more modern presence online — one that reflects the quality and expertise of the shop itself.
 
-The new site replaces the current Squarespace site with a premium custom design that is faster, cleaner, and built specifically for Land Rover and Range Rover owners. It presents PDX British as Portland's premier independent Rover specialist, highlights the family ownership story, showcases your services clearly, and makes it easy for customers to call, get directions, read reviews, or request service — all from any device.
+The new site is designed to replace the current website with a more modern, custom presentation — faster, cleaner, and built specifically for Land Rover and Range Rover owners. It presents PDX British as Portland's premier independent Rover specialist, highlights the family ownership story, showcases your services clearly, and makes it easy for customers to call, get directions, read reviews, or request service — all from any device.
 
 The current live site has not been changed. Nothing goes live until you review and approve.
 
@@ -40,16 +40,16 @@ The current live site has not been changed. Nothing goes live until you review a
 
 | Area | Current Live Site | New Site |
 |---|---|---|
-| Visual design | Basic / dated | Premium — dark green, gold, clean typography |
+| Visual design | Functional, established look | Premium — dark green, gold, clean typography |
 | Mobile experience | Functional | Fully responsive, easy to tap |
-| Number of pages | 3 (+ broken contact) | 5 full pages |
+| Number of pages | 3 core pages, with limited contact-page functionality | 5 full pages |
 | Phone number visibility | Header only | Top bar, header, hero, CTA band, footer, Quick Actions |
 | Quick contact buttons | None | Call Us, Directions, Google Reviews, Yelp, Schedule Service |
 | Testimonials | 5 (accordion, hidden) | 3 real named testimonials displayed prominently |
 | Service list | 17 items (plain list) | 4 detailed service blocks + 17-item full menu |
 | Land Rover models served | Listed | Listed |
-| Trust signals | Minimal | BBB, Google, Yelp, warranty, T4 TestBook, family-owned, since 1991 |
-| Contact form | Working | Present — backend connection pending your decision |
+| Trust signals | Limited on-page trust signals | BBB, Google, Yelp, warranty, T4 TestBook, family-owned, since 1991 |
+| Contact form | Basic contact page | Improved contact page with form display; final delivery setup pending approval |
 | Service area | Footer only | Homepage, contact page, footer |
 
 ---
